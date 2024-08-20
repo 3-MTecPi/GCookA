@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using GCook.Models;
 using GCook.Data;
 using GCook.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace GCook.Controllers;
 
@@ -20,8 +21,15 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         HomeVM home = new() {
-            Categorias = [.. _context.Categorias.Where(c => c.ExibirHome)],
-            Receitas = [.. _context.Receitas]
+            Categorias = _context.Categorias
+                .Where(c => c.ExibirHome)
+                .AsNoTracking()
+                .ToList(),
+            Receitas = _context.Receitas
+                .Include(r => r.Categoria)
+                .Include(r => r.Ingredientes)
+                .AsNoTracking()
+                .ToList()
         };
         return View(home);
     }

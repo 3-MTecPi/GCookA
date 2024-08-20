@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GCook.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class criarbanco : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -360,7 +360,7 @@ namespace GCook.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "51bd8ca0-e4d2-4c3a-88ba-9c8c863417e8", "admin@gcook.com", true, false, null, "ADMIN@GCOOK.COM", "ADMIN", "AQAAAAIAAYagAAAAEOSBP1aPxYz/P/WhEiSKtFep6OJI13gaGfEUcfYEHlV7BQos3cXqPJGSxNRUYrgegA==", null, false, "5352ae8b-cc54-4193-ab6d-4b4f658973dc", false, "Admin" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "6f8d25f1-2b6b-4729-ac73-f6dee7fc9637", "admin@gcook.com", true, false, null, "ADMIN@GCOOK.COM", "ADMIN", "AQAAAAIAAYagAAAAEP9B+tL5G5CQTlEgR+Pn0a+N/nRrDLFzWCFLXJQD1IcxPsw2wBI/hoCrwn4khprMig==", null, false, "6a55b411-d18f-415c-88ac-aeb7792edd6f", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Categoria",
